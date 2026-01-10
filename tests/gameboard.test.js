@@ -1,4 +1,4 @@
-const { Gameboard } = require('../src/gameClasses')
+const { Gameboard } = require('../src/gameboard')
 
 
 test('Gameboard creates proper grid', ()=>{
@@ -10,6 +10,5 @@ test('Gameboard creates proper grid', ()=>{
     expect(testGameBoard.gameGrid).toEqual([[null,null,null],
                                          [null,null,null], 
                                          [null,null,null]])
-
-
+                                         
 })

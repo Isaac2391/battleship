@@ -1,4 +1,4 @@
-const { Ship } = require('../src/gameClasses');
+const { Ship } = require('../src/Ship');
 
 test("Ships record the correct amount of hits", ()=>{
 

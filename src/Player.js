@@ -1,9 +1,8 @@
 const { Gameboard } = require('../src/Gameboard');
 class Player {
     
-    constructor(playerMark,Gameboard){
-
-        this.PlayerMark = playerMark;
+    constructor(Gameboard){
+        
         this.Gameboard = Gameboard;
 
     };
@@ -11,8 +10,6 @@ class Player {
     getPlayerShipFleet(){
         return Gameboard.shipFleet;
     };
-
-
     
 };
 

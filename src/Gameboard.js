@@ -90,16 +90,15 @@ class Gameboard {
 
     allShipsSunk(){ 
 
-        for (let i = 0; i < 5; i++){
-            if (this.shipFleet[i].isSunk() == false){
-                return false 
+        for (let eachShip of Object.values(this.shipFleet)){
+            if (eachShip.isSunk() == false){
+                return false;
             }
-        }
-    } 
-
-
+        } 
+        return true;
+    }
 
 
 }
 
-module.exports = {Gameboard}
+module.exports = {Gameboard};

@@ -13,7 +13,6 @@ test('Gameboard creates proper grid', ()=>{
 
 });
 
-
 test('Gameboard properly validates positions', ()=>{
 
     const testGameBoard = new Gameboard();
@@ -27,6 +26,20 @@ test('Gameboard properly validates positions', ()=>{
 
     expect(testGameBoard.validShipPosition(x,y)).toBe(false);
     expect(testGameBoard.validShipPosition(x+1,y+1)).toBe(true);
+
+})
+
+test('Gameboard properly places a vertical Carrier ship starting from [0,0]',()=>{
+
+    let testGameBoard = new Gameboard();
+
+    let initialPosition = [0,0];
+
+    testGameBoard.placeShip(testGameBoard.shipFleet.Carrier,initialPosition);
+
+    for (let i = 0; i < testGameBoard.shipFleet.Carrier.length; i++){
+        expect(testGameBoard.gameGrid[i][0]).toBe(true);
+    }
 
 })
 

@@ -1,12 +1,14 @@
 const {Ship} = require('../src/Ship');
 const {Player} = require('../src/Player');
 
+// On the grid; null = water, true = ship square, false = hit ship square 
 class Gameboard {
 
     constructor() {
 
         this.gridSize = 10;
-        this.gameGrid = Array(this.gridSize).fill(Array(this.gridSize));
+        this.gameGrid = Array.from({ length: this.gridSize },()=> 
+                        new Array(this.gridSize).fill(null));        
         this.missedAttacksList = []; 
 
         this.shipFleet = { "Carrier"   : new Ship(5), 
@@ -42,7 +44,6 @@ class Gameboard {
                 this.gameGrid[x+i][y] = true;
             }    
         }
-
         Ship.horizontal = !Ship.horizontal; 
     }
 

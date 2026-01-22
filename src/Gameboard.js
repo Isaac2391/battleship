@@ -98,7 +98,6 @@ class Gameboard {
         return true;
     }
 
-
 }
 
 module.exports = {Gameboard};

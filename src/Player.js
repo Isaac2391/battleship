@@ -2,15 +2,19 @@ const { Gameboard } = require('../src/Gameboard');
 class Player {
     
     constructor(Gameboard){
-        
         this.Gameboard = Gameboard;
-
-    };
-
-    getPlayerShipFleet(){
-        return Gameboard.shipFleet;
+        this.myTurn = false;
     };
     
 };
 
-module.exports = {Player};
+class ComputerPlayer extends Player {
+
+    constructor(Gameboard){
+        super(Gameboard);
+    };
+
+};
+
+
+module.exports = {Player,ComputerPlayer};

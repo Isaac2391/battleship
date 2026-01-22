@@ -1,4 +1,52 @@
-/* styles.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+
+    background-color: whitesmoke;
+
+
+}
+
+
+#MainTitle-Div {
+
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+#MainBody-Grids {
+    
+    display: flex; gap: 1rem; flex-direction: row;
+    margin-left: 20%; height: 25rem; width: 50rem; 
+
+}
+
+
+#PlayerGrid {
+    background-color: skyblue;
+    height: 100%; width: 50%;
+}
+
+
+#ComputerGrid {
+
+    background-color: palegoldenrod;
+    height: 100%; width: 50%; 
+
+}
+
+
+#GameStartButton {
+
+    background-color: limegreen; color: white; font-weight: bold; 
+    width: 7rem; height: 5rem; margin-left: 35%; margin-top: 35%;
+    border-radius: 25%; border: none; padding: 0;
+    
+
+}
+
+#GameStartButton:hover {
+
+    cursor: pointer;
+    
+}
